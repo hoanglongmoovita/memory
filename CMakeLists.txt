@@ -16,7 +16,8 @@ set(FOONATHAN_MEMORY_VERSION "${FOONATHAN_MEMORY_VERSION_MAJOR}.${FOONATHAN_MEMO
 
 # set a debug postfix
 set(CMAKE_DEBUG_POSTFIX "-dbg")
-
+#set( CMAKE_CXX_LINK_EXECUTABLE "/usr/bin/aarch64-linux-gnu-ld" )
+set ( CMAKE_AR "/usr/bin/aarch64-linux-gnu-ar" )
 # installation destinations
 if(UNIX OR VXWORKS)
     include(GNUInstallDirs)
@@ -49,14 +50,14 @@ include(cmake/atomic.cmake)
 # subdirectories
 add_subdirectory(src)
 if(FOONATHAN_MEMORY_BUILD_EXAMPLES)
-    add_subdirectory(example)
+	add_subdirectory(example)
 endif()
 if(FOONATHAN_MEMORY_BUILD_TESTS)
-    enable_testing()
-    add_subdirectory(test)
+	enable_testing()
+   	add_subdirectory(test)
 endif()
 if(FOONATHAN_MEMORY_BUILD_TOOLS)
-    add_subdirectory(tool)
+	add_subdirectory(tool)
 endif()
 
 # install readme and license
