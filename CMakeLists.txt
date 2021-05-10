@@ -17,7 +17,7 @@ set(FOONATHAN_MEMORY_VERSION "${FOONATHAN_MEMORY_VERSION_MAJOR}.${FOONATHAN_MEMO
 # set a debug postfix
 set(CMAKE_DEBUG_POSTFIX "-dbg")
 #set( CMAKE_CXX_LINK_EXECUTABLE "/usr/bin/aarch64-linux-gnu-ld" )
-set ( CMAKE_AR "/usr/bin/aarch64-linux-gnu-ar" )
+
 # installation destinations
 if(UNIX OR VXWORKS)
     include(GNUInstallDirs)
