@@ -4,3 +4,7 @@
 
 build
 .vscode
+
+build_aarch64
+build_cross
+build_host
